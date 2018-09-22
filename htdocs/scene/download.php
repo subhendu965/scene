@@ -1,0 +1,36 @@
+<?php
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$pageid=17013;
+$hb_folder_layer=1;
+$rootpath='';
+for($i=1;$i<=$hb_folder_layer;$i++){
+	$rootpath.="../";
+}
+
+//checking if some ine access directly or not
+include $rootpath."universal/init/init_protect.php";
+
+include $rootpath."universal/init/init_check.php";
+
+/////////////////////////////////////////////////////
+if($hb_user_logged_in){
+
+}else{
+	echo "<h1>Please log in to download any image</h1>";
+	die();
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if(isset($_GET['sqc']) && $_GET['sqc']=="85pl1Nko"){
+
+}else{
+    die("Unauthorized Entry");
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//include scene init
+
+
+$_SESSION['hb_scene']['nji96Pk']="mlp2014";
+$_SESSION['hb_scene']['adjust_image_223']="adj365";
+header("location:adjust_image.php?sqc=klPM69D"."&url=".$_GET['url']);
+
+?>
